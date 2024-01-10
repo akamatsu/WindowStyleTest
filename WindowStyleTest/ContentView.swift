@@ -12,10 +12,14 @@ import RealityKitContent
 struct ContentView: View {
     var body: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
+            Button {
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url)
+                }
+            }
+            label: {
+                Text("Settings")
+            }
         }
         .padding()
     }
