@@ -15,7 +15,11 @@ struct WindowStyleTestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .glassBackgroundEffect(displayMode: .always)
         }
+        .windowStyle(.plain)
+        
+        
         //.windowStyle(showBackground ? .automatic : .plain)
         
         .onChange(of: showBackground) {
