@@ -13,7 +13,7 @@ struct WindowStyleTestApp: App {
     @AppStorage(wrappedValue: true, "showBackground_preference") var showBackground
 
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: "Main") {
             ContentView()
                 .glassBackgroundEffect(displayMode: .always)
         }
